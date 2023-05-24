@@ -102,7 +102,12 @@ export async function onRequest(context) {  // Contents of context object
              
             }
         }
-        return response;
+        // return response;
+        return await fetch('https://i1.wp.com/telegra.ph/' + url.pathname + url.search, {
+            method: request.method,
+            headers: request.headers,
+            body: request.body,
+        })
      });
 
     return response;
