@@ -10,7 +10,7 @@ export async function onRequest(context) {  // Contents of context object
      context.request
      const url = new URL(request.url);
     
-    const response = fetch('https://i1.wp.com/telegra.ph/' + url.pathname + url.search + '?resize=390,71&ssl=1', {
+    const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
          method: request.method,
          headers: request.headers,
          body: request.body,
@@ -103,7 +103,7 @@ export async function onRequest(context) {  // Contents of context object
             }
         }
         // return response;
-        return await fetch('https://i1.wp.com/telegra.ph/' + url.pathname + url.search + '?resize=390,71&ssl=1', {
+        return await fetch('https://telegra.ph/' + url.pathname + url.search, {
             method: request.method,
             headers: request.headers,
             body: request.body,
